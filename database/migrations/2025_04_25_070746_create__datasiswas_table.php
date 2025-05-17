@@ -77,12 +77,10 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
-        // Urutan dibalik dari yang paling akhir dibuat
+
         Schema::dropIfExists('nilai');
         Schema::dropIfExists('mata_pelajarans');
         Schema::dropIfExists('guru');

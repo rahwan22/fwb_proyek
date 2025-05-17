@@ -21,11 +21,6 @@ Route::get('/', fn () => redirect('/login'));
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.process');
 
-// Route::get('/logout', function () {
-//     Auth::logout();
-//     return redirect('/login');
-// })->name('logout');
-
 
 Route::post('/logout', function (Request $request) {
     Auth::logout();

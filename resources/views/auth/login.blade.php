@@ -10,7 +10,6 @@
                     {{ session('error') }}
                 </div>
             @endif
-
             <form action="{{ route('login.process') }}" method="POST">
                 @csrf
                 <div class="mb-3">
