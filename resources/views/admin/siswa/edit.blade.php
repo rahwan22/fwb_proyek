@@ -2,6 +2,11 @@
 @section('title', 'Edit Siswa')
 
 @section('content')
+<style>
+    label {
+        color: white;
+    }
+</style>
 <div class="container">
     <h1>Edit Siswa</h1>
 

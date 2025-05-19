@@ -1,5 +1,5 @@
 @extends('layouts.auth')
-
+<div class="card shadow-sm" style="background-image: url('{{ asset('asset/ikn1.jpg') }}'); background-size: cover; background-position: center;">
 @section('content')
     <div class="card shadow-sm">
         <div class="card-body">
@@ -20,7 +20,7 @@
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" required>
                 </div>
-                <button class="btn btn-primary w-100" type="submit">Login</button>
+                <button class="btn btn-success w-100" type="submit">Login</button>
             </form>
         </div>
     </div>

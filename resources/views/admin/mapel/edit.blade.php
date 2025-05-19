@@ -3,6 +3,11 @@
 @section('title', 'Edit Mata Pelajaran')
 
 @section('content')
+<style>
+    label {
+        color: white;
+    }
+</style>
 <div class="container">
     <h1>Edit Mata Pelajaran</h1>
 

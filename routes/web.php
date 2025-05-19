@@ -32,7 +32,7 @@ Route::post('/logout', function (Request $request) {
 
 
 // ==================== ADMIN AREA =====================
-Route::middleware(['auth', 'role:admin,guru'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
     // CRUD Resources

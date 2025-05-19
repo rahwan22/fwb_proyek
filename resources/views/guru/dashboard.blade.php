@@ -2,10 +2,11 @@
 
 @section('title', 'Dashboard Guru')
 
+
 @section('content')
 <div class="container">
     <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold">Selamat Datang di Dashboard Guru</h1>
+        <h1 class="display-5 fw-bold">Dashboard Guru</h1>
         
     </div>
 

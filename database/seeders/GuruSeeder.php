@@ -4,6 +4,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Guru;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class GuruSeeder extends Seeder
 {
@@ -40,7 +41,7 @@ class GuruSeeder extends Seeder
             $user = User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'password' => $data['password'], // Password masih plaintext ya, bisa di-hash
+                'password' => Hash::make($data['password']), // ini yang bikin hash bcrypt
                 'role' => 'guru',
             ]);
 

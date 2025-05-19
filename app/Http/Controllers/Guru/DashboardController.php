@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Guru;
 
 use App\Http\Controllers\Controller;
@@ -9,6 +10,13 @@ class DashboardController extends Controller
     public function index()
     {
         $guru = Auth::user()->guru;
-        return view('guru.dashboard');
+
+        if (!$guru) {
+            return redirect()->route('login')->with('error', 'Data guru tidak ditemukan.');
+        }
+
+        $mataPelajaran = $guru->mataPelajaran; // pastikan relasi ini ada
+
+        return view('guru.dashboard', compact('guru', 'mataPelajaran'));
     }
 }

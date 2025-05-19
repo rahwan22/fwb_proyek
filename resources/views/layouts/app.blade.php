@@ -24,7 +24,44 @@
             color: white;
         }
     </style>
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url('{{ asset('asset/ikn1.jpg') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #000; /* Supaya teks tetap terbaca di background */
+    }
+
+    .container {
+        flex: 1;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    .logout-btn:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    footer {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+</style>
+
 </head>
+
 <body>
 
     <!-- Navbar -->
