@@ -24,8 +24,8 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.process');
 
 Route::post('/logout', function (Request $request) {
     Auth::logout();
-    $request->session()->invalidate();       // ✅ Benar
-    $request->session()->regenerateToken();  // ✅ Benar
+    $request->session()->invalidate();       
+    $request->session()->regenerateToken();  
     return redirect('/login');
 })->name('logout');
 
@@ -41,14 +41,14 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
         'siswa' => SiswaController::class,
         'mapel' => MapelController::class,
         'kelas' => KelasController::class,
-        'nilai' => NilaiController::class, // <-- Nilai resources untuk admin
+        'nilai' => NilaiController::class, 
     ]);
 });
 
 // ==================== GURU AREA =====================
 Route::middleware(['auth', 'role:admin,guru'])->prefix('guru')->name('guru.')->group(function () {
     Route::get('/dashboard', [GuruDashboardController::class, 'index'])->name('dashboard');
-    Route::resource('nilai', NilaiController::class)->except(['destroy']); // <-- Nilai untuk guru (hapus tidak diizinkan)
+    Route::resource('nilai', NilaiController::class)->except(['destroy']); 
 });
 
 // ==================== SISWA AREA =====================

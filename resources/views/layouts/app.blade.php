@@ -58,6 +58,8 @@
     footer {
         background-color: rgba(255, 255, 255, 0.8);
     }
+
+
 </style>
 
 </head>
@@ -71,7 +73,6 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item me-3 text-white">
